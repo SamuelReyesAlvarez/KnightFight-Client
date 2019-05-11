@@ -19,6 +19,9 @@ import javafx.stage.Stage;
 /**
  *
  * @author Samuel
+ *
+ * @version 1.1.1 (2019/05/11)
+ *
  */
 public class MainApp extends Application {
 
@@ -29,10 +32,10 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) {
         try {
             stage = primaryStage;
-            stage.setTitle("Inicio de sesion");
+            stage.setTitle("Knight Fight - Acceso");
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/Login.fxml"));
+            loader.setLocation(MainApp.class.getResource("view/LoginView.fxml"));
 
             AnchorPane anchor = (AnchorPane) loader.load();
             Scene scene = new Scene(anchor);
@@ -81,5 +84,4 @@ public class MainApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
 }

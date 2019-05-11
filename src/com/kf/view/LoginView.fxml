@@ -12,7 +12,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kf.view.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="450.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kf.view.LoginController">
    <children>
       <VBox alignment="CENTER" style="-fx-background-color: darkgrey;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
@@ -42,7 +42,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </ImageView>
-                  <TextField fx:id="etCorreo" prefHeight="35.0" promptText="correo electronico" style="-fx-background-color: lightgrey;" HBox.hgrow="ALWAYS">
+                  <TextField fx:id="mailTxF" prefHeight="35.0" promptText="correo electronico" style="-fx-background-color: lightgrey;" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets bottom="5.0" right="5.0" top="5.0" />
                      </HBox.margin></TextField>
@@ -58,7 +58,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </ImageView>
-                  <PasswordField fx:id="etClave" prefHeight="35.0" promptText="clave de usuario" style="-fx-background-color: lightgrey;" HBox.hgrow="ALWAYS">
+                  <PasswordField fx:id="pswdPwF" prefHeight="35.0" promptText="clave de usuario" style="-fx-background-color: lightgrey;" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets bottom="5.0" right="5.0" top="5.0" />
                      </HBox.margin></PasswordField>
@@ -67,12 +67,12 @@
                   <Insets left="75.0" right="75.0" top="10.0" />
                </VBox.margin>
             </HBox>
-            <Label fx:id="error" text="Datos de acceso incorrectos" textFill="#970000">
+            <Label fx:id="errorLbl" text="Datos de acceso incorrectos" textFill="#970000">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
             </Label>
-            <Button mnemonicParsing="false" onAction="#conectar" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #273746;" text="Conectar" textFill="WHITE">
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#connect" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #273746;" text="Conectar" textFill="WHITE">
                <font>
                   <Font name="Lucida Sans Regular" size="14.0" />
                </font>
@@ -80,7 +80,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#recuperarClave" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="No recuerdo mi clave de usuario" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#recoverPassword" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="No recuerdo mi clave de usuario" textAlignment="CENTER">
                <font>
                   <Font name="Lucida Sans Demibold" size="12.0" />
                </font>
